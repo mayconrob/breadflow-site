@@ -1,0 +1,270 @@
+:root {
+    --green-dark: #143d29;
+    --green-primary: #1e5631;
+    --green-light: #e8f3ec;
+    --gold-primary: #d4a338;
+    --gold-hover: #b88924;
+    --bg-main: #f9fbf9;
+    --text-dark: #1c2420;
+    --text-muted: #526159;
+    --white: #ffffff;
+    --radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-main);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--white);
+    border-bottom: 1px solid #e2e8e4;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--green-dark);
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--green-light) 0%, var(--bg-main) 100%);
+}
+
+.hero-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 760px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #fdf6e6;
+    color: #9c7216;
+    border: 1px solid #f0d799;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    line-height: 1.15;
+    color: var(--green-dark);
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Botões e Selo da Loja */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 26px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s, background-color 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--green-dark);
+    border: 1px solid #cbd5cf;
+}
+
+.btn-secondary:hover {
+    background-color: #f1f5f2;
+}
+
+.btn-store-soon {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: var(--radius);
+    background-color: var(--green-dark);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.98rem;
+    border: 1px solid var(--green-dark);
+    opacity: 0.88;
+    cursor: default;
+    user-select: none;
+}
+
+.store-icon {
+    color: var(--gold-primary);
+    font-size: 0.9rem;
+}
+
+/* Recursos */
+.features {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--green-dark);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 48px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 28px;
+    border-radius: var(--radius);
+    border: 1px solid #e2e8e4;
+    transition: box-shadow 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+}
+
+.card h3 {
+    color: var(--green-dark);
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+}
+
+.card p {
+    color: var(--text-muted);
+    line-height: 1.55;
+    font-size: 0.95rem;
+}
+
+/* Banner Privacidade */
+.privacy-banner {
+    padding: 40px 0 80px;
+}
+
+.privacy-box {
+    background-color: var(--green-dark);
+    color: var(--white);
+    padding: 56px 32px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.privacy-box h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.privacy-box p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #d1e0d7;
+    line-height: 1.6;
+}
+
+/* Rodapé */
+.footer {
+    border-top: 1px solid #e2e8e4;
+    padding: 32px 0;
+    background-color: var(--white);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: var(--green-primary);
+    text-decoration: none;
+}
+
+/* Responsivo para Celular */
+@media (max-width: 768px) {
+    .hero-grid {
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
